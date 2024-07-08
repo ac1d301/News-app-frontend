@@ -23,7 +23,7 @@ function TopHeadlines() {
   useEffect(() => {
     setIsLoading(true);
     const categoryParam = params.category ? `&category=${params.category}` : ""; // Handle empty category
-    fetch(`http://localhost:3000/top-headlines?language=en${categoryParam}&page=${page}&pageSize=${pageSize}`)
+    fetch(`https://news-app-o9p6.onrender.com/top-headlines?language=en${categoryParam}&page=${page}&pageSize=${pageSize}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch data'); // Throw error for unsuccessful responses
